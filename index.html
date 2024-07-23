@@ -29,8 +29,17 @@
     // ❗ Notes
     // 🧠 Try using destructuring to grab a reference to the first element of the array
     // 🧠 Try using the at method of arrays to grab the last element
-    const swapper = () => {
+    const swapper = (arr) => {
+      if (arr.length < 2) {
+        return "No swap performed"
+      }
+      let [first] = arr
+      let last = arr.at(-1)
 
+      arr[0] = last
+      arr[arr.length - 1] = first
+      
+      return arr
     }
 
     // 👉 CHALLENGE 2
@@ -46,7 +55,7 @@
     // 🧠 Try using the ternary operator instead of a conditional statement when deciding what to return.
     // 🧠 So instead of doing `if ('foo') return 'bar' else return 'baz'` do `return 'foo' ? 'bar' : 'baz'`
     // 🧠 The above recommendations allow to write the whole function body in just two clean lines!
-    const headAndTail = () => {
+    const headAndTail = (array) => {
 
     }
 
